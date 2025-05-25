@@ -12,5 +12,8 @@ dockerize:
 	docker build -t ${IMAGE_NAME}:${VERSION} \
     		--platform linux/amd64 -f Dockerfile .
 
+.PHONY: start
+start: build
+	./build/hello
 
 
