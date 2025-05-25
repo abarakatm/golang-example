@@ -20,6 +20,9 @@ start: build
 docker-run:
 	docker compose up --build
 
+.PHONY: docker-push
+docker-push: dockerize
+	docker push ${IMAGE_NAME}:${VERSION}
 
 
 
