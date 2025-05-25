@@ -16,4 +16,9 @@ dockerize:
 start: build
 	./build/hello
 
+.PHONY: start
+docker-run: dockerize
+	docker run -it --platform linux/amd64 ${IMAGE_NAME}:${VERSION}
+
+
 
